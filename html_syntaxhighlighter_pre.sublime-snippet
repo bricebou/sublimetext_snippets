@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+<pre class="brush:${1:lang}">
+
+</pre>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>sxh</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>text.html.markdown,text.html</scope>
+  <description>Outputs the `pre` tag for SyntaxHighlitghter</description>
+</snippet>
