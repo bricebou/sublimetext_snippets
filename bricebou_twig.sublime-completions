@@ -1,0 +1,11 @@
+{
+    "scope": "text.html.twig",
+
+    "completions":
+    [
+        { "trigger": "pt", "contents": "<p> {{ $1 }} </p>$0"},
+        { "trigger": "pct", "contents": "<p class=\"$1\"> {{ $2 }} </p>$0"},
+        { "trigger": "st", "contents": "<span> {{ $1 }} </span>$0" },
+        { "trigger": "sct", "contents": "<span class=\"$1\"> {{ $2 }} </span>$0" },
+    ]
+}
