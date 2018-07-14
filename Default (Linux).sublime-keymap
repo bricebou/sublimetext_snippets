@@ -1,0 +1,145 @@
+[
+    // LAYOUTS for lUbuntu
+    {
+      "keys": ["alt+shift+&"],
+      "command": "set_layout",
+      "args":
+      {
+        "cols": [0.0, 1.0],
+        "rows": [0.0, 1.0],
+        "cells": [[0, 0, 1, 1]]
+      }
+    },
+    {
+      "keys": ["alt+shift+é"],
+      "command": "set_layout",
+      "args":
+      {
+        "cols": [0.0, 0.5, 1.0],
+        "rows": [0.0, 1.0],
+        "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+      }
+    },
+    { "keys": ["ctrl+alt+&"], "command": "move_to_group", "args": { "group": 0 } },
+    { "keys": ["ctrl+alt+é"], "command": "move_to_group", "args": { "group": 1 } },
+    // MARKDOWN HEADERS
+    // Set Headers Levels With Shortcuts
+    { "keys": ["ctrl+&"], "command": "insert_snippet", "args": {"contents": "# $0"}, "context":
+     [
+         { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+         { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+         { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|$)", "match_all": true },
+         { "key": "preceding_text", "operator": "not_regex_contains", "operand": "['a-zA-Z0-9_]$", "match_all": true },
+         { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single", "match_all": true },
+         { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+     ]
+    },
+    { "keys": ["ctrl+&"], "command": "insert_snippet", "args": {"contents": "#${0: ${SELECTION/(^( +)?(#+)?\\s*|\\s*(#+)?( +)?$)//g}}$1"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.mde.match_header_hashes", "operator": "equal", "operand": false },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+        ]
+    },
+    { "keys": ["ctrl+&"], "command": "insert_snippet", "args": {"contents": "#${0: ${SELECTION/(^( +)?(#+)?\\s*|\\s*(#+)?( +)?$)//g} }#$1"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.mde.match_header_hashes", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+        ]
+    },
+    { "keys": ["ctrl+é"], "command": "insert_snippet", "args": {"contents": "## $0"}, "context":
+     [
+         { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+         { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+         { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|$)", "match_all": true },
+         { "key": "preceding_text", "operator": "not_regex_contains", "operand": "['a-zA-Z0-9_]$", "match_all": true },
+         { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single", "match_all": true },
+         { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+     ]
+    },
+    { "keys": ["ctrl+é"], "command": "insert_snippet", "args": {"contents": "##${0: ${SELECTION/(^( +)?(#+)?\\s*|\\s*(#+)?( +)?$)//g}}$1"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.mde.match_header_hashes", "operator": "equal", "operand": false },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+        ]
+    },
+    { "keys": ["ctrl+é"], "command": "insert_snippet", "args": {"contents": "##${0: ${SELECTION/(^( +)?(#+)?\\s*|\\s*(#+)?( +)?$)//g} }##$1"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.mde.match_header_hashes", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+        ]
+    },
+    { "keys": ["ctrl+\""], "command": "insert_snippet", "args": {"contents": "### $0"}, "context":
+     [
+         { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+         { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+         { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|$)", "match_all": true },
+         { "key": "preceding_text", "operator": "not_regex_contains", "operand": "['a-zA-Z0-9_]$", "match_all": true },
+         { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single", "match_all": true },
+         { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+     ]
+    },
+    { "keys": ["ctrl+\""], "command": "insert_snippet", "args": {"contents": "###${0: ${SELECTION/(^( +)?(#+)?\\s*|\\s*(#+)?( +)?$)//g}}$1"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.mde.match_header_hashes", "operator": "equal", "operand": false },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+        ]
+    },
+    { "keys": ["ctrl+\""], "command": "insert_snippet", "args": {"contents": "###${0: ${SELECTION/(^( +)?(#+)?\\s*|\\s*(#+)?( +)?$)//g} }###$1"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.mde.match_header_hashes", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
+        ]
+    },
+    // MARKDOWN Inline image with start path 
+    { 
+        "keys": ["super+i"],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/bricebou_sublimetext_snippets/md-img.sublime-snippet"},
+            "context":[{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" }]
+    },
+    // MARKDOWN Inline link
+    { 
+        "keys": ["super+l"],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/bricebou_sublimetext_snippets/md-lien.sublime-snippet"},
+            "context":[{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" }]
+    },
+    // MARKDOWN / HTML guillemets français
+    {
+        "keys": ["super+\""],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/bricebou_sublimetext_snippets/html-guillemets.sublime-snippet"},
+            "context":[{ "key": "selector", "operator": "equal", "operand": "text.html.markdown,text.html" }]
+    },
+    // MARKDOWN / HTML espaces insécables
+    {
+        "keys": ["super+space"],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/bricebou_sublimetext_snippets/html-nbsp.sublime-snippet"},
+            "context":[{ "key": "selector", "operator": "equal", "operand": "text.html.markdown,text.html" }]
+    },
+    // LATEX guillemets français
+    {
+        "keys": ["super+\""],
+        "command": "insert_snippet",
+        "args": {
+            "name": "Packages/User/bricebou_sublimetext_snippets/latex-guillemets.sublime-snippet"},
+            "context":[{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+]

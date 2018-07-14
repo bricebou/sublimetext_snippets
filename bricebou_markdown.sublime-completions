@@ -1,9 +1,0 @@
-{
-    "scope": "text.html.markdown",
-
-    "completions":
-    [   
-        { "trigger": "momhh", "contents": "\/*\nTitle: $1\nDescription: $2\nAuthor: Brice Boucard\nDate: ${3:yyyy\/mm\/dd}\nLicense: Creative Commons Attribution-ShareAlike 4.0 International License\nTags: $4\nCategory: $5\nTemplate: post\n*\/" },
-        { "trigger": "momhi", "contents": "![${1:alt}](../../assets/ \"${2:title}\")$0"},
-    ]
-}

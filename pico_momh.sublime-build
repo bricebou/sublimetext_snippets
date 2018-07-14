@@ -1,0 +1,3 @@
+{
+    "shell_cmd": "sass -t compressed styles.scss ../styles.min.css"
+}
