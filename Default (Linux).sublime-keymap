@@ -1,4 +1,6 @@
-[
+[   
+    { "keys": ["ctrl+super+up"], "command": "select_lines", "args": {"forward": false} },
+    { "keys": ["ctrl+super+down"], "command": "select_lines", "args": {"forward": true} },
     // LAYOUTS for lUbuntu
     {
       "keys": ["alt+shift+&"],
